@@ -20,7 +20,7 @@ while count < 999999:
                 endofindex = data.find(end, index)
                 currentpos = index + 1
                 urlcount  += 1
-                if os.path.exists(directory + data[index+25:endofindex]):
+                if os.path.exists(directory + data[index+len(start):endofindex]):
                         print 'Directory up to date. Found existing file.'
                         quit()
                 os.system('wget -P ' + directory + ' -nc -U "' + useragent + '" ' + 'http://interfacelift.com' + data[index+9:endofindex])
