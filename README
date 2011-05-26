@@ -1,0 +1,8 @@
+The regex pattern matches any string which:
+
+- Is preceeded by <a href="
+- begins with /wallpaper/
+- ends in jpg
+- preceeds ">
+
+I think this is enough to filter out only the wanted links. Note that the matched string will include the random part of the URL so that the user never has to specify it manually. Each filename also contains the resolution. This could be added to the pattern in case it stops working.
