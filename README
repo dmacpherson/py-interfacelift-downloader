@@ -1,3 +1,11 @@
+To install just run the following:
+
+wget https://github.com/dmacpherson/py-interfacelift-downloader/raw/master/interfacelift.py
+
+Edit the variables to where you'd like to download from and download to and run "python interfacelift.py"
+
+
+
 The regex pattern matches any string which:
 
 - Is preceeded by <a href="
