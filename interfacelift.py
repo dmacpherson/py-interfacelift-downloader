@@ -30,6 +30,6 @@ while count < 9999999:
                 os.system('wget -P ' + directory + ' -nc -U "' + useragent + '" ' + 'http://interfacelift.com' + picture)
 
         if urlcount == 0:
-                print "Downloaded " + wallpapercount + " wallpaper from InterfaceLift." 
+                print "Downloaded " + str(wallpapercount) + " wallpaper from InterfaceLift." 
                 quit()
         count += 1
