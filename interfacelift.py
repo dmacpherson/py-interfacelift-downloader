@@ -6,7 +6,7 @@ import re
 # -- Changable Variables
 
 url             = 'http://interfacelift.com/wallpaper/downloads/date/hdtv/1080p/' #Browse to the page that has all the wallpaper you want and paste here
-directory       = '/home/mythuser/1080p' #Path to download to
+directory       = '/home/user/wallpaper/1080p' #Path to download to
 useragent       = 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.3) Gecko/20100401 Firefox/3.6.3 (.NET CLR 3.5.30729)' #Fake useragent since wget is blocked
 pattern         = '(?<=<a href=")/wallpaper/.*jpg(?=">)' # The regex pattern used to look up picture url paths
 picturepattern  = '[^/]*$' # The regex pattern to pull picture filename to see if file exists
