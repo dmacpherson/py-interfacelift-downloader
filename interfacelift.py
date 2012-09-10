@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, urllib2, re, sys, commands
+import os, urllib2, re, sys, commands, random
 
 # -- Changable Variables
 url             = 'http://interfacelift.com/wallpaper/downloads/date/2_screens/2880x900/' #Browse to the page that has all the wallpaper you want and paste here
@@ -15,7 +15,9 @@ wallpapercount  = 0
 count           = 1
 
 while count < 9999999:
-        data       = urllib2.urlopen(url + "index" + str(count) + ".html").read()
+        headers    = { 'User-Agent' : useragent }
+        request    = urllib2.Request(url + "index" + str(count) + ".html", None, headers)
+        data       = urllib2.urlopen(request).read()
         pictures   = re.findall(pattern, data)
         urlcount   = len(pictures)
         for picture in pictures:
@@ -46,3 +48,7 @@ while count < 9999999:
                 print "Downloaded " + str(wallpapercount) + " wallpaper from InterfaceLift."
                 quit()
         count += 1
+        randomnum  = random.randint(0,30)
+        print 'Sleeping for :' + str(randomnum)
+        time.sleep(randomnum)
+
