@@ -27,7 +27,7 @@ while count < 9999999:
                         if stoponfind == "1":
                                 print 'Directory up to date. Downloaded ' + str(wallpapercount) + ' new wallpaper.'
                                 quit()
-                status, output = commands.getstatusoutput(wgetpath + ' -P ' + directory + ' -nc -U "' + useragent + '" ' + 'http://interfacelift.com' + picture)
+                status, output = commands.getstatusoutput(wgetpath + ' -P ' + directory + ' --random-wait -nc -U "' + useragent + '" ' + 'http://interfacelift.com' + picture)
                 if status == 0:
                         print str(wallpapercount) + '. Downloaded http://interfacelift.com' + picture + ' ...'
                 else:
@@ -46,9 +46,11 @@ while count < 9999999:
                 wallpapercount += 1
         if urlcount == 0:
                 print "Downloaded " + str(wallpapercount) + " wallpaper from InterfaceLift."
+                randomnum  = random.randint(5,10)
+                print 'Sleeping for :' + str(randomnum)
                 quit()
         count += 1
-        randomnum  = random.randint(0,30)
+        randomnum  = random.randint(10,30)
         print 'Sleeping for :' + str(randomnum)
         time.sleep(randomnum)
 
