@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, urllib2, re, sys, commands, random
+import os, urllib2, re, sys, commands, random, time
 
 # -- Changable Variables
 url             = 'http://interfacelift.com/wallpaper/downloads/date/2_screens/2880x900/' #Browse to the page that has all the wallpaper you want and paste here
